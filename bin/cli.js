@@ -16,33 +16,37 @@ const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/JuanQuez/create-express-quez ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm install`;
 
-console.log("installing your project with the name");
+console.log(
+" \x1b[36mINSTALLING YOUR PROJECT WITH NAME:\x1b[0m\n"+
+`             \x1b[32m${repoName}\x1b[0m               \n`+
+"                                       \n"+    
+"█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
+"█ ██ ██ ██ ██ ██ ██ ██ ██ ██          █\n"+
+"█ ██ ██ ██ ██ ██ ██ ██ ██ ██          █\n"+
+"█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"+
+"                                       \n"+
+"  █    █▀▀▀█ █▀▀█ █▀▀▄ ▀█▀ █▄  █ █▀▀█  \n"+
+"  █    █   █ █▄▄█ █  █  █  █ █ █ █ ▄▄  \n"+
+"  █▄▄█ █▄▄▄█ █  █ █▄▄▀ ▄█▄ █  ▀█ █▄▄█  \n"+
+"                                       \n"
+);
 const checkedOut = runCommand(gitCheckoutCommand);
 if (!checkedOut) process.exit(code,-1);
 
-console.log(
-"              ,---------------------------,\n"+
-"              | |-----------------------| |\n"+
-"              | |                       | |\n"+
-"              | |      Installing       | |\n"+
-"              | |     Dependencies      | |\n"+
-`              | |${repoName            }| |\n`+
-"              | |                       | |\n"+
-"              | |_______________________| |\n"+
-"              |___________________________|\n"+
-"            ,---|_____     []     _______|------,\n"+
-"          /         |______________|           /|\n"+
-"        /___________________________________ /  | ___\n"+
-"        |                                   |   |    )\n"+
-"        |  _ _ _                 [-------]  |   |   (\n"+
-"        |  o o o                 [-------]  |  /    _)\n"+
-"        |__________________________________ |/     /  / \n"+
-"    /-------------------------------------/|      ( )/ \n"+
-"  /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ / \n"+
-"/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ / \n"+
-"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-);
+console.log("           \x1b[35mINSTALLING DEPENDENCIES\x1b[0m");
+
 const installedDeps = runCommand(installDepsCommand);
 if (!installedDeps) proccess.exit(code,-1);
 
-console.log("Message random");
+Console.log(
+"                                       \n"+    
+"█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
+"█ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ █\n"+
+"█ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ █\n"+
+"█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"+
+"     ▄▄▄▄                              \n"+
+"     █    █▄  █ █▀▀▄ ▀█▀ █▄  █ █▀▀█    \n"+
+"     █▄▄  █ █ █ █  █  █  █ █ █ █ ▄▄    \n"+
+"     █▄▄▄ █  ▀█ █▄▄▀ ▄█▄ █  ▀█ █▄▄█    \n"+
+"                                       \n"
+);

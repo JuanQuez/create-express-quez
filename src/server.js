@@ -14,10 +14,13 @@ const main = async () => {
             "  ██║     ██║   ██║██║╚██╗██║██║╚██╗██║██╔══╝  ██║        ██║   ██╔══╝  ██║  ██║ \n" +
             "  ╚██████╗╚██████╔╝██║ ╚████║██║ ╚████║███████╗╚██████╗   ██║   ███████╗██████╔╝ \n" +
             "   ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═╝   ╚══════╝╚═════╝  \n" +
-            "                                                                    \x1b[36m⮞ Juan Quez\x1b[0m"                                                                                     
+            "                                                                                   "
         );
         app.listen(PORT);
-        console.log(`                     ⚡ GREAT, THE PORT \x1b[32;1m${PORT}\x1b[0m IS ALL YOURS!⚡`);
+        console.log(
+            `                    ⚡ GREAT, THE PORT \x1b[32;1m${PORT}\x1b[0m IS ALL YOURS!⚡\n` +
+            "                                   \x1b[36mJuan Quez\x1b[0m                 "
+        );
     } catch (error) {
         console.log(error);
     }
