@@ -18,11 +18,11 @@ const installDepsCommand = `cd ${repoName} && npm install`;
 
 console.log(`Installing your project with the name ${repoName}`);
 const checkedOut = runCommand(gitCheckoutCommand);
-if (!checkedOut) process.exitCode(-1);
+if (!checkedOut) process.exit(code,-1);
 
 console.log(`Installing required dependencies ${repoName}`);
 const installedDeps = runCommand(installDepsCommand);
-if (!installedDeps) proccess.exitCode(-1);
+if (!installedDeps) proccess.exit(code,-1);
 
 console.log("Message random");
 console.log(`cd ${repoName}`);
