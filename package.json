@@ -1,13 +1,14 @@
 {
-  "name": "app-zero",
+  "name": "create-express-quez",
   "version": "1.0.0",
-  "description": "",
+  "description": "Template basic for nodejs and express with sequelize ORM",
   "main": "index.js",
-  "bin": "./bin/cli/js",
+  "bin": "./bin/cli.js",
   "scripts": {
     "start": "node src/server",
 		"dev": "nodemon src/server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npx"
   },
   "keywords": [],
   "author": "",
