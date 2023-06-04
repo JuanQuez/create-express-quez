@@ -18,8 +18,8 @@ const installDepsCommand = `cd ${repoName} && npm install`;
 
 console.log(
 "                                                  \n"+
-"    \x1b[37m\x1b[44mINSTALLING YOUR PROJECT WITH NAME\x1b[0m\n"+
-`             \x1b[32m${repoName}\x1b[0m               \n`+
+"      \x1b[1m\x1b[37m\x1b[44mINSTALLING YOUR PROJECT WITH NAME\x1b[0m\n"+
+`                 \x1b[1m\x1b[32m${repoName}\x1b[0m               \n`+
 "                                         \n"+    
 "  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
 "  █ \x1b[33m██ ██ ██ ██ ██ ██ ██ ██ ██\x1b[0m          █\n"+
@@ -35,8 +35,10 @@ const checkedOut = runCommand(gitCheckoutCommand);
 if (!checkedOut) process.exit(code,-1);
 
 console.log(
-    "                                             \n"+
-    "         \x1b[34mINSTALLING DEPENDENCIES\x1b[0m");
+    "                                               \n"+
+    "         \x1b[34mINSTALLING DEPENDENCIES\x1b[0m\n"+
+    "                                                 "
+    );
 
 const installedDeps = runCommand(installDepsCommand);
 if (!installedDeps) proccess.exit(code,-1);
