@@ -1,6 +1,6 @@
 {
   "name": "create-express-quez",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "Template basic for nodejs and express with sequelize ORM",
   "main": "index.js",
   "bin": "./bin/cli.js",
