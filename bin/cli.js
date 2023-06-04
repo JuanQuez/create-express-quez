@@ -36,7 +36,7 @@ if (!checkedOut) process.exit(code,-1);
 
 console.log(
     "                                               \n"+
-    "         \x1b[1m\x1b[32m\x1b[40m INSTALLING DEPENDENCIES \x1b[0m\n"+
+    "         \x1b[1m\x1b[36m\x1b[40m INSTALLING DEPENDENCIES \x1b[0m\n"+
     "                                                 "
     );
 
