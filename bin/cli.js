@@ -18,12 +18,12 @@ const installDepsCommand = `cd ${repoName} && npm install`;
 
 console.log(
 "                                                  \n"+
-" \x1b[36mINSTALLING YOUR PROJECT WITH NAME:\x1b[0m\n"+
-`             \x1b[32,1m${repoName}\x1b[0m               \n`+
+"         \x1b[34mINSTALLING YOUR PROJECT WITH NAME\x1b[0m\n"+
+`             \x1b[32m${repoName}\x1b[0m               \n`+
 "                                         \n"+    
 "  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
-"  █\x1b[33m██ ██ ██ ██ ██ ██ ██ ██ ██\x1b[0m         █\n"+
-"  █\x1b[33m██ ██ ██ ██ ██ ██ ██ ██ ██\x1b[0m         █\n"+
+"  █\x1b[33m ██ ██ ██ ██ ██ ██ ██ ██ ██\x1b[0m  █\n"+
+"  █\x1b[33m ██ ██ ██ ██ ██ ██ ██ ██ ██\x1b[0m  █\n"+
 "  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"+
 "                                         \n"+
 "    █    █▀▀▀█ █▀▀█ █▀▀▄ ▀█▀ █▄  █ █▀▀█  \n"+
@@ -36,7 +36,7 @@ if (!checkedOut) process.exit(code,-1);
 
 console.log(
     "                                             \n"+
-    "         \x1b[36mINSTALLING DEPENDENCIES\x1b[0m");
+    "         \x1b[34mINSTALLING DEPENDENCIES\x1b[0m");
 
 const installedDeps = runCommand(installDepsCommand);
 if (!installedDeps) proccess.exit(code,-1);
@@ -44,8 +44,8 @@ if (!installedDeps) proccess.exit(code,-1);
 console.log(
 "                                         \n"+    
 "  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
-"  █ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ █\n"+
-"  █ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ █\n"+
+"  █\x1b[32m ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ \x1b[0m█\n"+
+"  █\x1b[32m ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ \x1b[0m█\n"+
 "  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"+
 "                                         \n"+
 "               █▀▀█ █▀▀▀█ █              \n"+
