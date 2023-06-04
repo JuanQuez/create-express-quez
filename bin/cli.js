@@ -17,36 +17,39 @@ const gitCheckoutCommand = `git clone --depth 1 https://github.com/JuanQuez/crea
 const installDepsCommand = `cd ${repoName} && npm install`;
 
 console.log(
+"                                                  \n"+
 " \x1b[36mINSTALLING YOUR PROJECT WITH NAME:\x1b[0m\n"+
-`             \x1b[32m${repoName}\x1b[0m               \n`+
-"                                       \n"+    
-"█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
-"█ ██ ██ ██ ██ ██ ██ ██ ██ ██          █\n"+
-"█ ██ ██ ██ ██ ██ ██ ██ ██ ██          █\n"+
-"█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"+
-"                                       \n"+
-"  █    █▀▀▀█ █▀▀█ █▀▀▄ ▀█▀ █▄  █ █▀▀█  \n"+
-"  █    █   █ █▄▄█ █  █  █  █ █ █ █ ▄▄  \n"+
-"  █▄▄█ █▄▄▄█ █  █ █▄▄▀ ▄█▄ █  ▀█ █▄▄█  \n"+
-"                                       \n"
+`             \x1b[32,1m${repoName}\x1b[0m               \n`+
+"                                         \n"+    
+"  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
+"  █\x1b[33m██ ██ ██ ██ ██ ██ ██ ██ ██\x1b[0m         █\n"+
+"  █\x1b[33m██ ██ ██ ██ ██ ██ ██ ██ ██\x1b[0m         █\n"+
+"  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"+
+"                                         \n"+
+"    █    █▀▀▀█ █▀▀█ █▀▀▄ ▀█▀ █▄  █ █▀▀█  \n"+
+"    █    █   █ █▄▄█ █  █  █  █ █ █ █ ▄▄  \n"+
+"    █▄▄█ █▄▄▄█ █  █ █▄▄▀ ▄█▄ █  ▀█ █▄▄█  \n"+
+"                                         \n"
 );
 const checkedOut = runCommand(gitCheckoutCommand);
 if (!checkedOut) process.exit(code,-1);
 
-console.log("           \x1b[35mINSTALLING DEPENDENCIES\x1b[0m");
+console.log(
+    "                                             \n"+
+    "         \x1b[36mINSTALLING DEPENDENCIES\x1b[0m");
 
 const installedDeps = runCommand(installDepsCommand);
 if (!installedDeps) proccess.exit(code,-1);
 
-Console.log(
-"                                       \n"+    
-"█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
-"█ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ █\n"+
-"█ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ █\n"+
-"█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"+
-"     ▄▄▄▄                              \n"+
-"     █    █▄  █ █▀▀▄ ▀█▀ █▄  █ █▀▀█    \n"+
-"     █▄▄  █ █ █ █  █  █  █ █ █ █ ▄▄    \n"+
-"     █▄▄▄ █  ▀█ █▄▄▀ ▄█▄ █  ▀█ █▄▄█    \n"+
-"                                       \n"
+console.log(
+"                                         \n"+    
+"  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"+
+"  █ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ █\n"+
+"  █ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ █\n"+
+"  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n"+
+"                                         \n"+
+"               █▀▀█ █▀▀▀█ █              \n"+
+"               █ ▄▄ █   █ █              \n"+
+"               █▄▄█ █▄▄▄█ ▄              \n"+
+"                                         \n"
 );
